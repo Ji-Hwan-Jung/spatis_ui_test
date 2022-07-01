@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <style>
+      .bd-placeholder-img {
+        text-anchor: middle;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- NavBar -->
+    <nav class="navbar sticky-top shadow-sm bg-light mb-5">
+      <div class="container-md d-flex px-lg-5 px-xl-0">
+        <a class="navbar-brand fw-bold me-auto" href="main_not_logged_in.html"
+          >Boolog</a
+        >
+        <form class="d-flex" role="search">
+          <input
+            class="form-control form-control-sm me-2 rounded-5"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+        </form>
+        <button
+          type="button"
+          class="btn btn-outline-dark rounded-pill fw-bold"
+          data-bs-toggle="modal"
+          data-bs-target="#loginModal"
+          style="
+            --bs-btn-padding-y: 0.2rem;
+            --bs-btn-padding-x: 1rem;
+            --bs-btn-font-size: 0.85rem;
+          "
+        >
+          로그인
+        </button>
+      </div>
+    </nav>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+      style="--bs-modal-width: 22rem"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-3">
+          <div class="container-fluid">
+            <div class="row row-cols-1">
+              <div class="col-auto ms-auto">
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+            </div>
+
+            <div class="row row-cols-1 mb-3 mt-4">
+              <div class="col">
+                <h5 class="fw-bold">로그인</h5>
+              </div>
+            </div>
+            <div class="row row-cols-1 my-2">
+              <div class="col">
+                <input
+                  type="email"
+                  id="inputEmail"
+                  class="form-control rounded-1"
+                  placeholder="이메일을 입력하세요"
+                  style="font-size: 0.85rem"
+                />
+              </div>
+            </div>
+            <div class="row row-cols-1 my-2">
+              <div class="col">
+                <input
+                  type="password"
+                  id="inputPassword"
+                  class="form-control rounded-1"
+                  placeholder="비밀번호를 입력하세요"
+                  style="font-size: 0.85rem"
+                />
+              </div>
+            </div>
+            <div class="row row-cols-1 mt-3 mb-5">
+              <div class="col-auto ms-auto">
+                <button
+                  type="submit"
+                  class="btn btn-success"
+                  style="
+                    --bs-btn-padding-y: 0.2rem;
+                    --bs-btn-padding-x: 1rem;
+                    --bs-btn-font-size: 0.85rem;
+                  "
+                >
+                  로그인
+                </button>
+              </div>
+            </div>
+            <div class="row row-cols-2 justify-content-between">
+              <div class="col-auto me-auto">
+                <a href="#" class="text-success" style="font-size: 0.8rem"
+                  >비밀번호를 분실하셨나요?</a
+                >
+              </div>
+              <div class="col-auto">
+                <a href="#" class="text-success" style="font-size: 0.8rem"
+                  >회원이 아니신가요?</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 인기 탭 -->
+    <div class="container-md px-lg-5 px-xl-0">
+      <div class="row align-items-center mb-2">
+        <div class="col-auto">
+          <p class="text-decoration-none text-dark fw-semibold fs-4">
+            "_ _ _" 검색결과
+          </p>
+        </div>
+      </div>
+
+      <!-- 인기 탭 카드뷰 -->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-4 g-3">
+        <!-- 1번 요소 -->
+        <div class="col">
+          <div
+            class="card border-light shadow-sm"
+            style="--bs-card-height: 20rem"
+          >
+            <svg
+              class="bd-placeholder-img card-img-top"
+              width="100%"
+              height="10rem"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Placeholder: Thumbnail"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#55595c"></rect>
+              <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+            </svg>
+            <div class="card-body">
+              <h5
+                class="card-title text-truncate fw-semibold"
+                style="font-size: 1.1rem"
+              >
+                Bootstrap에 대해서 알아봅시다
+              </h5>
+              <p
+                class="card-text text-wrap text-truncate"
+                style="font-size: 0.75rem"
+              >
+                게시글 설명입니다
+              </p>
+            </div>
+            <div class="card-footer bg-transparent">
+              <small class="text-muted" style="font-size: 0.8rem"
+                >Last updated 3 mins ago</small
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- 2번 요소 -->
+        <div class="col">
+          <div
+            class="card border-light shadow-sm"
+            style="--bs-card-height: 20rem"
+          >
+            <svg
+              class="bd-placeholder-img card-img-top"
+              width="100%"
+              height="10rem"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Placeholder: Thumbnail"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#55595c"></rect>
+              <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+            </svg>
+            <div class="card-body">
+              <h5
+                class="card-title text-truncate fw-semibold"
+                style="font-size: 1.1rem"
+              >
+                Bootstrap에 대해서 알아봅시다
+              </h5>
+              <p
+                class="card-text text-wrap text-truncate"
+                style="font-size: 0.75rem"
+              >
+                게시글 설명입니다
+              </p>
+            </div>
+            <div class="card-footer bg-transparent">
+              <small class="text-muted" style="font-size: 0.8rem"
+                >Last updated 3 mins ago</small
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- 3번 요소 -->
+        <div class="col">
+          <div
+            class="card border-light shadow-sm"
+            style="--bs-card-height: 20rem"
+          >
+            <svg
+              class="bd-placeholder-img card-img-top"
+              width="100%"
+              height="10rem"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Placeholder: Thumbnail"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#55595c"></rect>
+              <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+            </svg>
+            <div class="card-body">
+              <h5
+                class="card-title text-truncate fw-semibold"
+                style="font-size: 1.1rem"
+              >
+                Bootstrap에 대해서 알아봅시다
+              </h5>
+              <p
+                class="card-text text-wrap text-truncate"
+                style="font-size: 0.75rem"
+              >
+                게시글 설명입니다
+              </p>
+            </div>
+            <div class="card-footer bg-transparent">
+              <small class="text-muted" style="font-size: 0.8rem"
+                >Last updated 3 mins ago</small
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- 4번 요소 -->
+        <div class="col">
+          <div
+            class="card border-light shadow-sm"
+            style="--bs-card-height: 20rem"
+          >
+            <svg
+              class="bd-placeholder-img card-img-top"
+              width="100%"
+              height="10rem"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Placeholder: Thumbnail"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#55595c"></rect>
+              <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+            </svg>
+            <div class="card-body">
+              <h5
+                class="card-title text-truncate fw-semibold"
+                style="font-size: 1.1rem"
+              >
+                Bootstrap에 대해서 알아봅시다
+              </h5>
+              <p
+                class="card-text text-wrap text-truncate"
+                style="font-size: 0.75rem"
+              >
+                게시글 설명입니다
+              </p>
+            </div>
+            <div class="card-footer bg-transparent">
+              <small class="text-muted" style="font-size: 0.8rem"
+                >Last updated 3 mins ago</small
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- 5번 요소 -->
+        <div class="col">
+          <div
+            class="card border-light shadow-sm"
+            style="--bs-card-height: 20rem"
+          >
+            <svg
+              class="bd-placeholder-img card-img-top"
+              width="100%"
+              height="10rem"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Placeholder: Thumbnail"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#55595c"></rect>
+              <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+            </svg>
+            <div class="card-body">
+              <h5
+                class="card-title text-truncate fw-semibold"
+                style="font-size: 1.1rem"
+              >
+                Bootstrap에 대해서 알아봅시다
+              </h5>
+              <p
+                class="card-text text-wrap text-truncate"
+                style="font-size: 0.75rem"
+              >
+                게시글 설명입니다
+              </p>
+            </div>
+            <div class="card-footer bg-transparent">
+              <small class="text-muted" style="font-size: 0.8rem"
+                >Last updated 3 mins ago</small
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- 6번 요소 -->
+        <div class="col">
+          <div
+            class="card border-light shadow-sm"
+            style="--bs-card-height: 20rem"
+          >
+            <svg
+              class="bd-placeholder-img card-img-top"
+              width="100%"
+              height="10rem"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Placeholder: Thumbnail"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#55595c"></rect>
+              <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+            </svg>
+            <div class="card-body">
+              <h5
+                class="card-title text-truncate fw-semibold"
+                style="font-size: 1.1rem"
+              >
+                Bootstrap에 대해서 알아봅시다
+              </h5>
+              <p
+                class="card-text text-wrap text-truncate"
+                style="font-size: 0.75rem"
+              >
+                게시글 설명입니다
+              </p>
+            </div>
+            <div class="card-footer bg-transparent">
+              <small class="text-muted" style="font-size: 0.8rem"
+                >Last updated 3 mins ago</small
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- 7번 요소 -->
+        <div class="col">
+          <div
+            class="card border-light shadow-sm"
+            style="--bs-card-height: 20rem"
+          >
+            <svg
+              class="bd-placeholder-img card-img-top"
+              width="100%"
+              height="10rem"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Placeholder: Thumbnail"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#55595c"></rect>
+              <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+            </svg>
+            <div class="card-body">
+              <h5
+                class="card-title text-truncate fw-semibold"
+                style="font-size: 1.1rem"
+              >
+                Bootstrap에 대해서 알아봅시다
+              </h5>
+              <p
+                class="card-text text-wrap text-truncate"
+                style="font-size: 0.75rem"
+              >
+                게시글 설명입니다
+              </p>
+            </div>
+            <div class="card-footer bg-transparent">
+              <small class="text-muted" style="font-size: 0.8rem"
+                >Last updated 3 mins ago</small
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- 8번 요소 -->
+        <div class="col">
+          <div
+            class="card border-light shadow-sm"
+            style="--bs-card-height: 20rem"
+          >
+            <svg
+              class="bd-placeholder-img card-img-top"
+              width="100%"
+              height="10rem"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Placeholder: Thumbnail"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#55595c"></rect>
+              <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+            </svg>
+            <div class="card-body">
+              <h5
+                class="card-title text-truncate fw-semibold"
+                style="font-size: 1.1rem"
+              >
+                Bootstrap에 대해서 알아봅시다
+              </h5>
+              <p
+                class="card-text text-wrap text-truncate"
+                style="font-size: 0.75rem"
+              >
+                게시글 설명입니다
+              </p>
+            </div>
+            <div class="card-footer bg-transparent">
+              <small class="text-muted" style="font-size: 0.8rem"
+                >Last updated 3 mins ago</small
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <nav aria-label="Page navigation example">
+          <ul
+            class="pagination justify-content-center"
+            style="
+              --bs-pagination-color: #000000;
+              --bs-pagination-active-bg: #198754;
+              --bs-pagination-active-border-color: #198754;
+              --bs-pagination-hover-color: #{$pagination-hover-color};
+              --bs-pagination-focus-color: none;
+              --bs-pagination-focus-bg: none;
+              --bs-pagination-focus-box-shadow: none;
+            "
+          >
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item active">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">5</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <footer
+      class="container-md d-flex flex-wrap justify-content-between align-items-center pt-1 pb-4 mt-5 border-top px-lg-5 px-xl-0"
+    >
+      <div class="col d-flex align-items-center me-auto">
+        <span class="text-muted">© 2022 Company, Inc</span>
+      </div>
+
+      <ul class="nav col justify-content-end list-unstyled d-flex">
+        <li class="ms-3">
+          <a class="text-muted" href="#"
+            ><svg class="bi" width="24" height="24">
+              <use xlink:href="#twitter"></use></svg
+          ></a>
+        </li>
+        <li class="ms-3">
+          <a class="text-muted" href="#"
+            ><svg class="bi" width="24" height="24">
+              <use xlink:href="#instagram"></use></svg
+          ></a>
+        </li>
+        <li class="ms-3">
+          <a class="text-muted" href="#"
+            ><svg class="bi" width="24" height="24">
+              <use xlink:href="#facebook"></use></svg
+          ></a>
+        </li>
+      </ul>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
